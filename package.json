@@ -2,9 +2,10 @@
   "name": "challenge",
   "version": "1.0.0",
   "description": "Serverless aws-nodejs-typescript template",
-  "main": "serverless.ts",
+  "main": "serverless.yml",
   "scripts": {
-    "dev": "serverless offline"
+    "dev": "serverless offline",
+    "dynamo:start": "serverless dynamodb start"
   },
   "engines": {
     "node": ">=14.15.0"
@@ -12,7 +13,9 @@
   "dependencies": {
     "@middy/core": "^1.5.2",
     "@middy/http-json-body-parser": "^1.5.2",
-    "source-map-support": "^0.5.19"
+    "aws-sdk": "^2.941.0",
+    "source-map-support": "^0.5.19",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@serverless/typescript": "^2.23.0",

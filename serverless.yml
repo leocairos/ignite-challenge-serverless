@@ -23,12 +23,12 @@ provider:
   name: aws
 
 functions:
-  hello:
-    handler: src/functions/hello.handle
+  createTodo:
+    handler: src/functions/createTodo.handle
     events:
       - http:
-          path: /hello
-          method: GET
+          path: /todos/{user_id}
+          method: POST
           cors: true
 
 resources: 
